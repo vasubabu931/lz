@@ -1,0 +1,94 @@
+[
+  {
+    "ParameterKey": "EnableEncryptedVolumesRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "EnableRdsEncryptionRule",
+    "ParameterValue": "false"
+  },
+  {
+    "ParameterKey": "EnableS3PublicReadRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "EnableS3PublicWriteRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "EnableS3ServerSideEncryptionRule",
+    "ParameterValue": "false"
+  },
+  {
+    "ParameterKey": "EnableRootMfaRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "EnableIamPasswordPolicyRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "EnableRestrictedCommonPortsRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "EnableRestrictedSshRule",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "KMSId",
+    "ParameterValue": ""
+  },
+  {
+    "ParameterKey": "MaximumExecutionFrequency",
+    "ParameterValue": "TwentyFour_Hours"
+  },
+  {
+    "ParameterKey": "RequireUppercaseCharacters",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "RequireLowercaseCharacters",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "RequireSymbols",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "RequireNumbers",
+    "ParameterValue": "true"
+  },
+  {
+    "ParameterKey": "MinimumPasswordLength",
+    "ParameterValue": "12"
+  },
+  {
+    "ParameterKey": "PasswordReusePrevention",
+    "ParameterValue": "6"
+  },
+  {
+    "ParameterKey": "MaxPasswordAge",
+    "ParameterValue": "90"
+  },
+  {
+    "ParameterKey": "blockedPort1",
+    "ParameterValue": "20"
+  },
+  {
+    "ParameterKey": "blockedPort2",
+    "ParameterValue": "21"
+  },
+  {
+    "ParameterKey": "blockedPort3",
+    "ParameterValue": "3389"
+  },
+  {
+    "ParameterKey": "blockedPort4",
+    "ParameterValue": "3306"
+  },
+  {
+    "ParameterKey": "blockedPort5",
+    "ParameterValue": "4333"
+  }
+]
