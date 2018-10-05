@@ -25,7 +25,7 @@
   },
   {
     "ParameterKey": "EnableIamPasswordPolicyRule",
-    "ParameterValue": "true"
+    "ParameterValue": "false"
   },
   {
     "ParameterKey": "EnableRestrictedCommonPortsRule",
