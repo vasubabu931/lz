@@ -60,65 +60,65 @@ organizational_units:
           - name: /org/member/sharedservices/account_id
             value: $[AccountId]
         core_resources:
-          - name: SharedServicesAccountVPC
-            template_file: templates/aws_baseline/aws-landing-zone-vpc.template
-            parameter_file: parameters/core_accounts/aws-landing-zone-shared-services-vpc.json
-            deploy_method: stack_set
-            regions:
-              - us-east-1
-            ssm_parameters:
-              - name: /org/member/sharedservices/vpc_region
-                value: $[output_VPCRegion]
-              - name: /org/member/sharedservices/vpc_cidr
-                value: $[output_VPCCIDR]
-              - name: /org/member/sharedservices/vpc_id
-                value: $[output_VPCID]
-              - name: /org/member/sharedservices/private_subnet1_cidr
-                value: $[output_PrivateSubnet1ACIDR]
-              - name: /org/member/sharedservices/private_subnet1_id
-                value: $[output_PrivateSubnet1AID]
-              - name: /org/member/sharedservices/private_subnet2_cidr
-                value: $[output_PrivateSubnet2ACIDR]
-              - name: /org/member/sharedservices/private_subnet2_id
-                value: $[output_PrivateSubnet2AID]
-              - name: /org/member/sharedservices/public_subnet1_cidr
-                value: $[output_PublicSubnet1CIDR]
-              - name: /org/member/sharedservices/public_subnet1_id
-                value: $[output_PublicSubnet1ID]
-              - name: /org/member/sharedservices/public_subnet2_cidr
-                value: $[output_PublicSubnet2CIDR]
-              - name: /org/member/sharedservices/public_subnet2_id
-                value: $[output_PublicSubnet2ID]
-              - name: /org/member/sharedservices/vpc_private_route_ids
-                value: $[output_PrivateSubnetRouteTables]
-          - name: SharedServicesActiveDirectory
-            template_file: templates/core_accounts/aws-landing-zone-aws-active-directory.template
-            parameter_file: parameters/core_accounts/aws-landing-zone-aws-active-directory.json
-            deploy_method: stack_set
-            regions:
-              - us-east-1
-            ssm_parameters:
-              - name: /org/directory_service/ad_server1_private_ip
-                value: $[output_ADServer1PrivateIP]
-              - name: /org/directory_service/ad_server2_private_ip
-                value: $[output_ADServer2PrivateIP]
-              - name: /org/directory_service/domain_dns_name
-                value: $[output_DomainDNSName]
-              - name: /org/directory_service/domain_netbios_name
-                value: $[output_DomainNetBIOSName]
-              - name: /org/directory_service/domain_admin_user
-                value: $[output_DomainAdmin]
-              - name: /org/directory_service/domain_member_sg_id
-                value: $[output_DomainMemberSGID]
-          - name: SharedServicesRDGW
-            template_file: templates/core_accounts/aws-landing-zone-rdgw.template
-            parameter_file: parameters/core_accounts/aws-landing-zone-rdgw.json
-            deploy_method: stack_set
-            regions:
-              - us-east-1
-            ssm_parameters:
-              - name: /org/member/sharedservices/rdgw_ip1
-                value: $[output_EIP1]
+        #  - name: SharedServicesAccountVPC
+        #    template_file: templates/aws_baseline/aws-landing-zone-vpc.template
+        #    parameter_file: parameters/core_accounts/aws-landing-zone-shared-services-vpc.json
+        #    deploy_method: stack_set
+        #    regions:
+        #      - us-east-1
+        #    ssm_parameters:
+        #      - name: /org/member/sharedservices/vpc_region
+        #        value: $[output_VPCRegion]
+        #      - name: /org/member/sharedservices/vpc_cidr
+        #        value: $[output_VPCCIDR]
+        #      - name: /org/member/sharedservices/vpc_id
+        #        value: $[output_VPCID]
+        #      - name: /org/member/sharedservices/private_subnet1_cidr
+        #        value: $[output_PrivateSubnet1ACIDR]
+        #      - name: /org/member/sharedservices/private_subnet1_id
+        #        value: $[output_PrivateSubnet1AID]
+        #      - name: /org/member/sharedservices/private_subnet2_cidr
+        #        value: $[output_PrivateSubnet2ACIDR]
+        #      - name: /org/member/sharedservices/private_subnet2_id
+        #        value: $[output_PrivateSubnet2AID]
+        #      - name: /org/member/sharedservices/public_subnet1_cidr
+        #        value: $[output_PublicSubnet1CIDR]
+        #      - name: /org/member/sharedservices/public_subnet1_id
+        #        value: $[output_PublicSubnet1ID]
+        #      - name: /org/member/sharedservices/public_subnet2_cidr
+        #        value: $[output_PublicSubnet2CIDR]
+        #      - name: /org/member/sharedservices/public_subnet2_id
+        #        value: $[output_PublicSubnet2ID]
+        #      - name: /org/member/sharedservices/vpc_private_route_ids
+        #        value: $[output_PrivateSubnetRouteTables]
+        #  - name: SharedServicesActiveDirectory
+        #    template_file: templates/core_accounts/aws-landing-zone-aws-active-directory.template
+        #    parameter_file: parameters/core_accounts/aws-landing-zone-aws-active-directory.json
+        #    deploy_method: stack_set
+        #    regions:
+        #      - us-east-1
+        #    ssm_parameters:
+        #      - name: /org/directory_service/ad_server1_private_ip
+        #        value: $[output_ADServer1PrivateIP]
+        #      - name: /org/directory_service/ad_server2_private_ip
+        #        value: $[output_ADServer2PrivateIP]
+        #      - name: /org/directory_service/domain_dns_name
+        #        value: $[output_DomainDNSName]
+        #      - name: /org/directory_service/domain_netbios_name
+        #        value: $[output_DomainNetBIOSName]
+        #      - name: /org/directory_service/domain_admin_user
+        #        value: $[output_DomainAdmin]
+        #      - name: /org/directory_service/domain_member_sg_id
+        #        value: $[output_DomainMemberSGID]
+        #  - name: SharedServicesRDGW
+        #    template_file: templates/core_accounts/aws-landing-zone-rdgw.template
+        #    parameter_file: parameters/core_accounts/aws-landing-zone-rdgw.json
+        #    deploy_method: stack_set
+        #    regions:
+        #      - us-east-1
+        #    ssm_parameters:
+        #      - name: /org/member/sharedservices/rdgw_ip1
+        #        value: $[output_EIP1]
       # Organization's Master account
       - name: primary  # NOTE: DO NOT MODIFY THIS ACCOUNT NAME AND IT SHOULD BE THE LAST CORE ACCOUNT IN THE LIST
         ssm_parameters:
@@ -132,33 +132,33 @@ organizational_units:
           - name: /org/primary/organization_id
             value: $[OrganizationId]
         core_resources:
-          - name: PrimaryAccountVPC
-            template_file: templates/aws_baseline/aws-landing-zone-vpc.template
-            parameter_file: parameters/core_accounts/aws-landing-zone-primary-account-vpc.json
-            deploy_method: stack_set
-            regions:
-              - us-east-1
-            ssm_parameters:
-              - name: /org/primary/vpc_cidr
-                value: $[output_VPCCIDR]
-              - name: /org/primary/vpc_id
-                value: $[output_VPCID]
-              - name: /org/primary/private_subnet1_cidr
-                value: $[output_PrivateSubnet1ACIDR]
-              - name: /org/primary/private_subnet1_id
-                value: $[output_PrivateSubnet1AID]
-              - name: /org/primary/private_subnet2_cidr
-                value: $[output_PrivateSubnet2ACIDR]
-              - name: /org/primary/private_subnet2_id
-                value: $[output_PrivateSubnet2AID]
-              - name: /org/primary/vpc_private_route_ids
-                value: $[output_PrivateSubnetRouteTables]
-          - name: PrimaryADConnector
-            template_file: templates/core_accounts/aws-landing-zone-aws-ad-connector.template
-            parameter_file: parameters/core_accounts/aws-landing-zone-aws-ad-connector.json
-            deploy_method: stack_set
-            regions:
-              - us-east-1
+      #    - name: PrimaryAccountVPC
+      #      template_file: templates/aws_baseline/aws-landing-zone-vpc.template
+      #      parameter_file: parameters/core_accounts/aws-landing-zone-primary-account-vpc.json
+      #      deploy_method: stack_set
+      #      regions:
+      #        - us-east-1
+      #      ssm_parameters:
+      #        - name: /org/primary/vpc_cidr
+      #          value: $[output_VPCCIDR]
+      #        - name: /org/primary/vpc_id
+      #          value: $[output_VPCID]
+      #        - name: /org/primary/private_subnet1_cidr
+      #          value: $[output_PrivateSubnet1ACIDR]
+      #        - name: /org/primary/private_subnet1_id
+      #          value: $[output_PrivateSubnet1AID]
+      #        - name: /org/primary/private_subnet2_cidr
+      #          value: $[output_PrivateSubnet2ACIDR]
+      #        - name: /org/primary/private_subnet2_id
+      #          value: $[output_PrivateSubnet2AID]
+      #        - name: /org/primary/vpc_private_route_ids
+      #          value: $[output_PrivateSubnetRouteTables]
+       #   - name: PrimaryADConnector
+       #     template_file: templates/core_accounts/aws-landing-zone-aws-ad-connector.template
+       #     parameter_file: parameters/core_accounts/aws-landing-zone-aws-ad-connector.json
+       #     deploy_method: stack_set
+       #     regions:
+       #       - us-east-1
   - name: randd
     include_in_baseline_products:
       - AWS-Landing-Zone-Account-Vending-Machine
@@ -256,14 +256,14 @@ baseline_resources:
     #   - us-west-2
     #   - eu-west-1
 
-  - name: EnableConfigRules
-    baseline_products:
-      - AWS-Landing-Zone-Account-Vending-Machine
-    depends_on:
-      - EnableConfig
-    template_file: templates/aws_baseline/aws-landing-zone-config-rules.template
-    parameter_file: parameters/aws_baseline/aws-landing-zone-config-rules.json
-    deploy_method: stack_set
+  #- name: EnableConfigRules
+  #  baseline_products:
+  #    - AWS-Landing-Zone-Account-Vending-Machine
+  #  depends_on:
+  #    - EnableConfig
+  #  template_file: templates/aws_baseline/aws-landing-zone-config-rules.template
+  #  parameter_file: parameters/aws_baseline/aws-landing-zone-config-rules.json
+  #  deploy_method: stack_set
 
   - name: SecurityRoles
     baseline_products:
